@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <SCript>
+        // QUESTION : 26-30
+        // *********************Q1 — Positive integer (round, floor, ceil)*******************************
+        let posNum = parseFloat(prompt("Enter a positive integer:"));
+
+        document.write("Number: " + posNum + "<br>");
+        document.write("Round off value: " + Math.round(posNum) + "<br>");
+        document.write("Floor value: " + Math.floor(posNum) + "<br>");
+        document.write("Ceil value: " + Math.ceil(posNum) + "<br>");
+
+        // *********************Q2 — Negative floating number (round, floor, ceil)*******************************
+        let negFloat = parseFloat(prompt("Enter a negative floating-point number:"));
+
+        document.write("Number: " + negFloat + "<br>");
+        document.write("Round off value: " + Math.round(negFloat) + "<br>");
+        document.write("Floor value: " + Math.floor(negFloat) + "<br>");
+        document.write("Ceil value: " + Math.ceil(negFloat) + "<br>");
+
+        // *********************Q3 — Absolute value*******************************
+        let anyNum = parseFloat(prompt("Enter a number:"));
+        document.write("The absolute value of " + anyNum + " is " + Math.abs(anyNum) +"<br>");
+
+        // *********************Q4 — Dice simulation*******************************
+        let diceValue = Math.floor(Math.random() * 6) + 1;
+        document.write("Random dice value: " + diceValue +"<br>");
+
+        // *********************Q5 — Coin toss simulation*******************************
+        let coinToss = Math.floor(Math.random() * 2) + 1;
+        if (coinToss === 1) {
+            document.write("Random coin value: Heads" +"<br>");
+        } else {
+            document.write("Random coin value: Tails" +"<br>");
+        }
+
+        // ***********************Q6 — Random number 1 to 100*****************************
+        let randomNum = Math.floor(Math.random() * 100) + 1;
+        document.write("Random number between 1 and 100: " + randomNum +"<br>");
+
+        // ***********************Q7 — Parse weight*****************************
+        let weightInput = prompt("Enter your weight (e.g., 50, 50kgs, 50.2kgs, 50.2kilograms):");
+        let weight = parseFloat(weightInput);
+        document.write("The weight of user is " + weight + " kilograms" +"<br>");
+
+        // **********************Q8 — Secret number guessing game******************************
+        let secretNum = Math.floor(Math.random() * 10) + 1;
+        let userGuess = parseInt(prompt("Guess the secret number between 1 and 10:"));
+
+        if (userGuess === secretNum) {
+            alert("Congratulations! You guessed the secret number." +"<br>");
+        } else {
+            alert("Sorry! The secret number was " + secretNum +"<br>");
+        }
+
+        
+    </SCript>
+</body>
+</html>

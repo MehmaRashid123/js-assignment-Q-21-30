@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // CHAPTER : 21-25 
+        // **********************************************
+        let firstName = prompt("Enter your first name:");
+        let lastName = prompt("Enter your last name:");
+        let fullName = firstName + " " + lastName;
+        alert("Hello, " + fullName + "! Welcome!");
+        // **********************************************
+
+        let mobileModel = prompt("Enter your favorite mobile phone model:");
+
+        let length = mobileModel.length;
+
+        alert("Your favorite mobile phone model is: " + mobileModel + 
+            "\nLength of input: " + length);
+
+        // **********************************************
+        let word = "Pakistani";
+
+        let index = word.indexOf("n");
+
+        alert("String: " + word + "\nIndex of 'n': " + index);
+
+        // **********************************************
+
+        let text = "Hello World";
+
+        let lastIndex = text.lastIndexOf("l");
+
+        alert("String: " + text + "\nLast index of 'l': " + lastIndex)
+
+        // **********************************************
+        let word2 = "Pakistani";
+
+        let charAt3 = word2.charAt(3);
+
+        alert("String: " + word2 + "\nCharacter at index 3: " + charAt3);
+
+        // **********************************************
+
+        let firstName2 = prompt("Enter your first name:");
+
+        let lastName2 = prompt("Enter your last name:");
+
+        let fullName2 = firstName2.concat(" ", lastName2);
+
+        alert("Hello, " + fullName2 + "! Welcome!");
+
+        // **********************************************
+
+
+        let city = "Hyderabad";
+        let newCity = city.replace("Hyder", "Islam");
+        alert("City: " + city + "\nAfter replacement: " + newCity);
+        // **********************************************
+
+
+        let message = "Ali and Sami are best friends. They play cricket and football together.";
+        let newMessage = message.replace(/and/g, "&");
+        alert("Message: " + message + "\nAfter replacement: " + newMessage);
+
+       // **********************************************
+
+        let str = "472";
+        let num = Number(str);
+        alert("Value: " + str + "\nType: " + typeof str +
+            "\nValue: " + num + "\nType: " + typeof num);
+        // **********************************************
+        
+        let userInput1 = prompt("Enter some text:");
+        alert("User input: " + userInput1 + "\nUpper case: " + userInput1.toUpperCase());
+        // **********************************************
+        let userInput2 = prompt("Enter some text:");
+        let titleCase = userInput2.charAt(0).toUpperCase() + userInput2.slice(1).toLowerCase();
+        alert("User input: " + userInput2 + "\nTitle case: " + titleCase);
+
+        // **********************************************
+        let num2 = 35.36;
+        let str2 = num2.toString().replace(".", "");
+        alert("Number: " + num2 + "\nResult: " + str2);
+
+        // **********************************************
+        let username = prompt("Enter your username:");
+        let invalidChars = [33, 44, 46, 64]; // ASCII codes for ! , . @
+        let isValid = true;
+
+for (let i = 0; i < username.length; i++) {
+    if (invalidChars.includes(username.charCodeAt(i))) {
+        isValid = false;
+        break;
+            }
+        }
+
+        if (!isValid) {
+                   alert("Please enter a valid username without special symbols [@ . , !]");
+        } else {
+            alert("Valid username: " + username);
+        }
+
+        // **********************************************
+        let A = ["cake", "apple pie", "cookie", "chips", "patties"];
+        let searchItem = prompt("Enter item to search:").toLowerCase();
+
+        if (A.includes(searchItem)) {
+            alert(searchItem + " is available at index " + A.indexOf(searchItem) + " in our bakery.");
+        } else {
+            alert("We are sorry. " + searchItem + " is not available in our bakery.");
+        }
+
+        // **********************************************
+        let password = prompt("Enter your password:");
+
+        if (!isNaN(password.charAt(0))) {
+            alert("Password cannot begin with a number.\nPlease enter a valid password.");
+        } else if (password.length < 6) {
+            alert("Password must be at least 6 characters long.");
+        } else if (!/[A-Za-z]/.test(password) || !/[0-9]/.test(password)) {
+            alert("Password must contain both alphabets and numbers.");
+        } else {
+            alert("Valid password!");
+        }
+
+        // **********************************************
+        let university = "University of Karachi";
+        let uniArray = university.split(" ");
+        alert(uniArray.join("\n"));
+
+        // **********************************************
+        let userInput3 = prompt("Enter a word:");
+        alert("User input: " + userInput3 + "\nLast character: " + userInput3.charAt(userInput3.length - 1));
+
+        // **********************************************
+        let text_new = "The quick brown fox jumps over the lazy dog";
+        let count = (text_new.toLowerCase().match(/the/g) || []).length;
+        alert("Text: " + text_new + "\nThere are " + count + " occurrence(s) of word 'the'");
+
+        
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
